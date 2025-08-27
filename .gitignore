@@ -1,0 +1,8 @@
+# IDE
+/.idea/
+
+# common
+*.log
+/**/logs/
+/**/data/
+
