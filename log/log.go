@@ -3,7 +3,7 @@ package log
 import (
 	"fmt"
 	"github.com/happy3014/happybase/config"
-	"github.com/happy3014/happybase/util"
+	"github.com/happy3014/happybase/utils"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
@@ -16,7 +16,7 @@ var sugarLogger *zap.SugaredLogger
 
 func InitLog(conf config.LogConfig) error {
 	// 初始化目录
-	err := util.CreateDirIfNotExists(conf.LogDir)
+	err := utils.CreateDirIfNotExists(conf.LogDir)
 	if err != nil {
 		return err
 	}

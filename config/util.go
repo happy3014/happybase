@@ -10,9 +10,12 @@ import (
 
 var config Config
 
+// GlobalConfig 全局配置，用于获取全局配置
 func GlobalConfig() Config {
 	return config
 }
+
+// InitConfig 初始化配置文件，程序启动前需要手动调用该函数初始化全局配置
 func InitConfig(configFilePath string) error {
 	viper.SetConfigFile(configFilePath)
 	err := viper.ReadInConfig()
