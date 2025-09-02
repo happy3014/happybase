@@ -7,6 +7,7 @@ require (
 	github.com/go-viper/mapstructure/v2 v2.2.1 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jordan-wright/email v4.0.1-0.20210109023952-943e75fe5223+incompatible // indirect
+	github.com/modelcontextprotocol/go-sdk v0.3.1 // indirect
 	github.com/pelletier/go-toml/v2 v2.2.3 // indirect
 	github.com/robfig/cron/v3 v3.0.0 // indirect
 	github.com/sagikazarmark/locafero v0.7.0 // indirect
