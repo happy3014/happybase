@@ -29,10 +29,23 @@ func NewHelloTask() *HelloTask {
 
 func (h *HelloTask) Init() error {
 	h.sugarLogger.Info("hello task init")
+	return nil
 }
 
 func (h *HelloTask) Start() error {
 	h.sugarLogger.Info("hello task start")
+	go h.run()
+	return nil
+}
+
+func (h *HelloTask) Stop() error {
+	h.sugarLogger.Info("hello task stop")
+	h.cancelFunc()
+	return nil
+}
+
+func (h *HelloTask) run() {
+	h.sugarLogger.Info("hello task run")
 	ticker := time.NewTicker(5 * time.Minute)
 	defer ticker.Stop()
 
@@ -44,9 +57,4 @@ func (h *HelloTask) Start() error {
 			h.sugarLogger.Info("hello task tick")
 		}
 	}
-}
-
-func (h *HelloTask) Stop() error {
-	h.sugarLogger.Info("hello task stop")
-	h.cancelFunc()
 }
